@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Tracker</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+  <style>
+    #tasks {
+      list-style-type: none;
+      padding: 0;
+    }
+    .task {
+      padding: 10px;
+      margin: 5px;
+      background-color: lightgray;
+      border: 1px solid black;
+      cursor: grab;
+    }
+  </style>
+</head>
+<body>
+  <h2>My Project Tracker</h2>
+  <ul id="tasks">
+    <li class="task">Task 1</li>
+    <li class="task">Task 2</li>
+    <li class="task">Task 3</li>
+  </ul>
+
+  <script>
+    var el = document.getElementById('tasks');
+    new Sortable(el);
+  </script>
+</body>
+</html>
