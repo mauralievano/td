@@ -6,6 +6,19 @@
   <title>Project Tracker</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
   <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .project {
+      margin: 20px;
+      padding: 10px;
+      border: 2px solid #333;
+      width: 15%;
+    }
+    .project-title {
+      font-weight: bold;
+    }
     #tasks {
       list-style-type: none;
       padding: 0;
@@ -21,15 +34,66 @@
 </head>
 <body>
   <h2>My Project Tracker</h2>
-  <ul id="tasks">
-    <li class="task">Task 1</li>
-    <li class="task">Task 2</li>
-    <li class="task">Task 3</li>
-  </ul>
+  
+  <div class="container">
+    <div class="project">
+      <div class="project-title">Project 1</div>
+      <ul id="tasks1">
+        <li class="task">Task 1.1</li>
+        <li class="task">Task 1.2</li>
+        <li class="task">Task 1.3</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Project 2</div>
+      <ul id="tasks2">
+        <li class="task">Task 2.1</li>
+        <li class="task">Task 2.2</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Project 3</div>
+      <ul id="tasks3">
+        <li class="task">Task 3.1</li>
+        <li class="task">Task 3.2</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Project 4</div>
+      <ul id="tasks4">
+        <li class="task">Task 4.1</li>
+        <li class="task">Task 4.2</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Project 5</div>
+      <ul id="tasks5">
+        <li class="task">Task 5.1</li>
+        <li class="task">Task 5.2</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Project 6</div>
+      <ul id="tasks6">
+        <li class="task">Task 6.1</li>
+        <li class="task">Task 6.2</li>
+      </ul>
+    </div>
+  </div>
 
   <script>
-    var el = document.getElementById('tasks');
-    new Sortable(el);
+    new Sortable(document.getElementById('tasks1'));
+    new Sortable(document.getElementById('tasks2'));
+    new Sortable(document.getElementById('tasks3'));
+    new Sortable(document.getElementById('tasks4'));
+    new Sortable(document.getElementById('tasks5'));
+    new Sortable(document.getElementById('tasks6'));
   </script>
 </body>
 </html>
+
